@@ -1,5 +1,5 @@
 {
-  "audio_book": {
+  "_doc": {
     "properties": {
       "author": {
         "type": "text",

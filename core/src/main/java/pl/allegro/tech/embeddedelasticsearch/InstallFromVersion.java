@@ -40,7 +40,7 @@ class InstallFromVersion implements InstallationSource {
         ELS_2x("2.", "https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/{VERSION}/elasticsearch-{VERSION}.zip"),
         ELS_5x("5.", "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{VERSION}.zip"),
         ELS_6x("6.", ELS_5x.downloadUrl),
-        ELS_7x("7.", "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{VERSION}-windows-x86_64.zip");
+        ELS_7x("7.", "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{VERSION}-linux-x86_64.tar.gz");
 
         String versionPrefix;
         String downloadUrl;

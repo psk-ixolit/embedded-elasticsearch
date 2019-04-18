@@ -16,7 +16,7 @@ class PluginsInstallationSpec extends PluginsInstallationBaseSpec {
 
     @Override
     String pluginByUrlUrl() {
-        return "https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-6.3.0.zip"
+        return "https://artifacts.elastic.co/downloads/elasticsearch-plugins/analysis-stempel/analysis-stempel-7.0.0.zip"
     }
 
     @Override

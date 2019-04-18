@@ -1,5 +1,5 @@
 {
-  "paper_book": {
+  "_doc": {
     "properties": {
       "author": {
         "type": "text",
