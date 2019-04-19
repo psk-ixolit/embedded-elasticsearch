@@ -13,6 +13,7 @@ class SampleIndices {
     static final CARS_TEMPLATE_NAME = "cars_template"
     static final CARS_TEMPLATE = resourceToString("cars-template.json")
     static final CARS_TEMPLATE_6x = getSystemResourceAsStream("cars-template-6x.json")
+    static final CARS_TEMPLATE_7x = getSystemResourceAsStream("cars-template-7x.json")
     static final BOOKS_INDEX_NAME = "books"
     static final PAPER_BOOK_INDEX_TYPE = "paper_book"
     static final AUDIO_BOOK_INDEX_TYPE = "audio_book"

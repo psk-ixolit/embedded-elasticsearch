@@ -8,6 +8,13 @@ import org.elasticsearch.client.RestHighLevelClient
 import org.elasticsearch.index.query.QueryBuilders
 import org.elasticsearch.search.builder.SearchSourceBuilder
 
+import static java.lang.ClassLoader.getSystemResourceAsStream
+import static java.lang.ClassLoader.getSystemResourceAsStream
+import static java.lang.ClassLoader.getSystemResourceAsStream
+import static java.lang.ClassLoader.getSystemResourceAsStream
+import static java.lang.ClassLoader.getSystemResourceAsStream
+import static java.lang.ClassLoader.getSystemResourceAsStream
+import static java.lang.ClassLoader.getSystemResourceAsStream
 import static java.util.concurrent.TimeUnit.MINUTES
 import static pl.allegro.tech.embeddedelasticsearch.PopularProperties.HTTP_PORT
 import static pl.allegro.tech.embeddedelasticsearch.SampleIndices.*
@@ -21,7 +28,7 @@ class EmbeddedElasticSpec extends EmbeddedElasticCoreApiBaseSpec {
             .withElasticVersion(ELASTIC_VERSION)
             .withSetting(HTTP_PORT, HTTP_PORT_VALUE)
             .withEsJavaOpts("-Xms128m -Xmx512m")
-            .withTemplate(CARS_TEMPLATE_NAME, CARS_TEMPLATE_6x)
+            .withTemplate(CARS_TEMPLATE_NAME, CARS_TEMPLATE_7x)
             .withIndex(CARS_INDEX_NAME)
             .withIndex(BOOKS_INDEX_NAME, BOOKS_INDEX)
             .withStartTimeout(2, MINUTES)
@@ -66,7 +73,7 @@ class EmbeddedElasticSpec extends EmbeddedElasticCoreApiBaseSpec {
     @Override
     List<String> fetchAllDocuments(String indexName, String typeName, String routing) {
         final searchRequest = new SearchRequest(indexName)
-                .types(typeName)
+                //.types(typeName)
                 .routing(routing)
                 .source(new SearchSourceBuilder().query(QueryBuilders.matchAllQuery()))
 
@@ -87,7 +94,7 @@ class EmbeddedElasticSpec extends EmbeddedElasticCoreApiBaseSpec {
 
     @Override
     String getById(String indexName, String typeName, String id) {
-        final getRequest = new GetRequest(indexName, typeName, id)
+        final getRequest = new GetRequest(indexName, id)
         client.get(getRequest).sourceAsString
     }
 }
