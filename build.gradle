@@ -28,6 +28,8 @@ subprojects {
     }
 }
 
+task install(dependsOn: ['core:install'])
+
 task wrapper(type: Wrapper) {
     gradleVersion = '4.7'
 }
